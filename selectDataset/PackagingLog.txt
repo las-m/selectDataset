@@ -1,0 +1,55 @@
+ant:
+<ant>
+  <mkdir dir="C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_redistribution" />
+  <mkdir dir="C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_testing" />
+  <mkdir dir="C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_redistribution_files_only" />
+</ant>
+mcc -C -o selectDataset -W WinMain:selectDataset -T link:exe -d C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_testing -v C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset.m -a C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\mysql-connector-java-5.1.37-bin.jar 
+[Warning:
+"C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\mysql-connector-java-5.1.37-bin.jar"
+is already specified on static java path.] 
+[> In javaclasspath>local_validate_dynamic_path (line 277)
+  In javaclasspath>local_javapath (line 182)
+  In javaclasspath (line 119)
+  In javaaddpath (line 69)] 
+Compiler version: 6.0 (R2015a)
+Dependency analysis by REQUIREMENTS.
+[Warning: Adding path "C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset" to
+Compiler path instance.] 
+Parsing file "C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset.m"
+	(Referenced from: "Compiler Command Line").
+Deleting 25 temporary MEX authorization files.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c831669_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c84686_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c831378_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c87372_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c818300_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c827648_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c818086_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c831823_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c828662_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c826321_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c87617_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c813211_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c823164_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c89022_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c827829_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c820810_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c87186_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c824531_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c816180_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c87251_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c824996_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c817627_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c820567_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c82616_6600.auth'.
+Removing: 'C:\Users\khueck\AppData\Local\Temp\mathworks_tmp_019c87233_6600.auth'.
+Generating file "C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_testing\readme.txt".
+Packaging...
+Adding custom icon C:\Program Files\MATLAB\R2015a\toolbox\compiler\Resources\default_icon.ico to C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_testing\selectDataset.exe.
+Attempting to embed the CTF archive into the application C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_testing\selectDataset.exe.
+Finished embedding CTF archive. Deleting the external CTF archive.
+Creating the bundle...
+Web based installer created at C:\Users\khueck\Documents\MATLAB\Klaus\selectDataset\selectDataset\for_redistribution\selectDataset_Installer.exe.
+Packaging complete.
+Elapsed packaging time was: 5 minutes and 5 seconds.
