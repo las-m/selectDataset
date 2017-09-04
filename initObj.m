@@ -72,7 +72,7 @@ params = params(~strcmp(params,'idY'))'; %#ok<NODEF>
     %data(strcmp(header,'timestamp')),'Format','ddMMyyyy h:mm:ss a'))); %#ok<ST2NM>
 %quick fix
 datetimecol = datetime( data(strcmp(header,'timestamp')),'Format','dd.MM.yyyy HH:mm:ss');
-formatOut = 'yyyyddmm';
+formatOut = 'yyyymmdd';
 onlydate = datestr(datetimecol,formatOut);
 params{strcmp(params,'datum'),2} = str2num(onlydate);
 
@@ -80,13 +80,13 @@ params{strcmp(params,'foldername'),2} = char(data(strcmp(header,'name')));
 params{strcmp(params,'Camera'),2} = strrep(char(data(strcmp(header,'camera'))), '_', '');
 params{strcmp(params,'trim'),2} = false;
 params{strcmp(params,'trapCompensation'),2} = false;
-params{strcmp(params,'padding'),2} = '[30, 30, 30, 30]';
+params{strcmp(params,'padding'),2} = '[1, 1, 2, 1]';
 params{strcmp(params,'hasNoAtoms'),2} = true;
-params{strcmp(params,'cropOnLoad'),2} = false;
+params{strcmp(params,'cropOnLoad'),2} = true;
 params{strcmp(params,'numFilter'),2} = 0.2;
 params{strcmp(params,'IrisOpening'),2} = 'large';
 params{strcmp(params,'cycle_id'),2} = 1;
-params{strcmp(params,'formatspec'),2} = '%d';
+params{strcmp(params,'formatspec'),2} = '%g';
 params{strcmp(params,'hack'),2} = true;
 params{strcmp(params,'inner_boundary'),2} = '[0, 0, 0, 0]';
 params{strcmp(params,'outer_boundary'),2} = '[0, 0, 0, 0]';
@@ -95,7 +95,7 @@ params{strcmp(params,'tofs'),2} = 1;
 params{strcmp(params,'id'),2} = data{strcmp(header,'id')};
 params{strcmp(params,'loopvars'),2} = 1;
 params{strcmp(params,'isQMC'),2} = false;
-params{strcmp(params,'cleanUp'),2} = false;
+params{strcmp(params,'cleanUp'),2} = true;
 params{strcmp(params,'trimRange'),2} = 1;
 
 % try to gess the filename
@@ -235,11 +235,11 @@ if strcmp(choice, 'Yes')
     
     code{end+1} = '';
     code{end+1} = '% notify the database about this script';
-    code{end+1} = [get(handles.editObjectName, 'String') '.dbSet(' ...
+    code{end+1} = ['% ' get(handles.editObjectName, 'String') '.dbSet(' ...
         '''scripts'', ''' fullPath ''');'];
     code{end+1} = '';
     code{end+1} = '% load data';
-    code{end+1} = [get(handles.editObjectName, 'String') '.loadImages;'];
+    code{end+1} = [get(handles.editObjectName, 'String') '.loadImages(''doReinaudi'', true);'];
     
     % open file for write access and append code
     fId = fopen(fullPath,'a');
